@@ -1,0 +1,86 @@
+{
+  "uid" : "568a7311b7db691f",
+  "name" : "test_1_login",
+  "fullName" : "testcases.test_login.TestLogin#test_1_login",
+  "historyId" : "e4845b7a618108d316a3ffc65ad38089",
+  "time" : {
+    "start" : 1629885111054,
+    "stop" : 1629885121641,
+    "duration" : 10587
+  },
+  "status" : "broken",
+  "statusMessage" : "AttributeError: 'NoneType' object has no attribute 'click'",
+  "statusTrace" : "self = <testcases.test_login.TestLogin object at 0x000002547C390970>\ntest_logsystem = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"194ee1ded752f249a83dc8b01cf6cb90\")>\n\n    def test_1_login(self,test_logsystem):\n        self.page1=TestLogPage(test_logsystem)\n        file=ReadWrite(datafile_path,1)\n        userlist = file.read()\n        user = userlist[0]\n        self.page1.type_username(user[0])\n        self.page1.type_password(user[1])\n        self.page1.click_login()\n        try:\n            time.sleep(2)\n            assert self.page1.browser.title == \"我的地盘 - 禅道\"\n            print(\"测试用例成功：登录成功！\")\n            # self.assertEqual(self.page1.browser.title, '我的地盘 - 禅道')\n        except AssertionError:\n            print(\"测试用例失败：登录失败！\")\n>       self.page1.click_user()\n\ntestcases\\test_login.py:24: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <pytest_f.testpageobjects.testloginObject.TestLogPage object at 0x000002547C390940>\n\n    def click_user(self):\n>       self.browser.find_element(*self.user).click()\nE       AttributeError: 'NoneType' object has no attribute 'click'\n\ntestpageobjects\\testloginObject.py:22: AttributeError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "test_logsystem",
+    "time" : {
+      "start" : 1629885108170,
+      "stop" : 1629885111052,
+      "duration" : 2882
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "test_logsystem::0",
+    "time" : {
+      "start" : 1629885130124,
+      "stop" : 1629885132192,
+      "duration" : 2068
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "testcases"
+  }, {
+    "name" : "suite",
+    "value" : "test_login"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestLogin"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-9AHN0V2"
+  }, {
+    "name" : "thread",
+    "value" : "1348-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "testcases.test_login"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "568a7311b7db691f.json",
+  "parameterValues" : [ ]
+}
